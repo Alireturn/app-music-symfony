@@ -44,6 +44,10 @@ class Music
 
     #[ORM\ManyToMany(targetEntity: User::class, inversedBy: 'favoris')]
     private Collection $favoris;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $url;
 
     public function __construct()
     {
@@ -139,5 +143,16 @@ class Music
         $this->favoris->removeElement($favori);
 
         return $this;
+    }
+
+
+    /**
+     * Get the URL of the music.
+     *
+     * @return string The URL of the music.
+     */
+    public function getUrl(): ?string
+    {
+        return $this->url;
     }
 }

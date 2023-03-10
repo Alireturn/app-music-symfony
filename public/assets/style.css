@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto&family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 *{
     margin: 0;
@@ -14,7 +15,8 @@ a{
 
 
 body{
-background-color: #030303;
+  background-image: linear-gradient(to right top, #0f2f60, #004460, #125353, #475d4e, #67675c);
+
 min-height: 100vh;
 }
 
@@ -23,8 +25,8 @@ nav{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding: 4px 40px;
-    color: white;
+    padding: 4px 65px;
+    box-shadow: 0px -6px 18px black;
 }
 
 .info{
@@ -34,6 +36,28 @@ nav{
 }
 .login{
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  
+}
+
+.login img{
+  margin-right: 10px;
+  height: 29px;
+  transition: all .2s ease-in-out;
+}
+.login img:hover{
+  transform: scale(1.1);
+}
+.favoris{
+  height: 300px;
+  width: 100%;
+}
+
+.container-favoris{
+  margin: 10px 20px;
 }
 .search{
     display: flex;
@@ -77,6 +101,20 @@ input:focus{
   justify-content: center;
 }
 
+.redirection{
+  background-color: red;
+}
+.infos-user{
+ margin-top: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.infos-user i{
+  margin-right:  10px;
+ 
+}
 .form-login{
 
   display: flex;
@@ -99,21 +137,28 @@ input:focus{
   
 }
 
-.main-register{
-  background-color: #005571;
-  height: 90vh;
+main{
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-.register{
-  background-color: rgb(97, 121, 142);
+
+.register-container{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+ padding: 50px;
 }
-#register div{
+.register-container div{
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -121,23 +166,52 @@ input:focus{
   text-align: center;
 }
 
-#register div input{
+.register-container div input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.register-container div label{
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.nameRegister {
+ margin-bottom: 10px;
+}
+
+.nameRegister h1{
+  font-family: 'Open Sans', sans-serif;
+}
+/* .register {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  text-align: center;
+
+}
+
+.register input{
   padding: 8px 26px;
   border-radius: 5px;
   border: 1px solid black;
 }
-#register div label{
+.register label{
 margin-bottom: 5px;
 font-weight: bold;
 font-size: 17px;
+color: whitesmoke;
 }
-#register button{
+.register button{
   background-color: #33a748;
   padding: 10px;
   border: 1px solid black;
 border-radius: 10px;
 cursor: pointer;
-  }
+  } */
 
 section{
   padding: 20px 100px;
@@ -196,11 +270,13 @@ section{
 
 
   .palyerAudio{
-    background-color: #333;
+    background-color: #F1F3F4;
     overflow: hidden;
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
 .img-content{

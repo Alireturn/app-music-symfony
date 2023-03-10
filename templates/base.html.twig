@@ -11,6 +11,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 		<script src="{{ asset('assets/index.js') }}" defer></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	</head>
 	<body>
 		<nav>
@@ -21,9 +22,6 @@
 				{% if app.user %}
 					<a href=" {{ path('app_account')}} ">
 						<img src="{{ asset('assets/img/profil.png')}}" height="30px" alt=""></a>
-					{# {{ app.user.userIdentifier }}, #}
-					<a href="{{ path('app_logout') }}">Logout</a>
-					<a href="{{ path('favorites_index') }}">favoris</a>
 				{% else %}
 					<a href="{{ path('app_login') }}">Connexion</a>
 					<a href="{{ path('app_register') }}">Inscription</a>
@@ -31,5 +29,16 @@
 			</div>
 		</nav>
 		{% block body %}{% endblock %}
+
+		{% block footer %}
+			<footer>
+
+				<div class="palyerAudio">
+					<audio id="audio" src="" controls autoplay></audio>
+				</div>
+
+			</footer>
+
+		{% endblock %}
 	</body>
 </html></body></html>
