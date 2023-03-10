@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Nunito Sans', sans-serif;  
+}
+a{
+    color: white;
+}
+
+
+body{
+background-color: #030303;
+min-height: 100vh;
+}
+
+nav{
+    background-color: transparent;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 4px 40px;
+    color: white;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+  color: white;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    width: 300px;
+    padding-left: 5px;
+
+    
+}
+
+.search input{
+    margin-right: 85px;
+    background-color: transparent;
+    border: transparent;
+    padding: 12px 0;
+
+
+        
+}
+input:focus{
+    outline: none;
+}
+
+.search:hover{
+    background-color: aliceblue;
+}
+.containerForm{
+  height: 100vh;
+  background-color: red;
+}
+
+
+.login-content{
+
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login{
+
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 300px;
+
+}
+.form-login input{
+  padding: 5px 20px;
+}
+
+.form-login button{
+  margin-top: 20px;
+}
+.container-row{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.main-register{
+  background-color: #005571;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register{
+  background-color: rgb(97, 121, 142);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#register div{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  text-align: center;
+}
+
+#register div input{
+  padding: 8px 26px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#register div label{
+margin-bottom: 5px;
+font-weight: bold;
+font-size: 17px;
+}
+#register button{
+  background-color: #33a748;
+  padding: 10px;
+  border: 1px solid black;
+border-radius: 10px;
+cursor: pointer;
+  }
+
+section{
+  padding: 20px 100px;
+}
+
+.Musique-Recentes{
+  margin-top: 10px;
+}
+.Musique-Recentes h2{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+  .title-musique-category{
+    margin-bottom: 10px;
+  }
+  .infos-favoris p {
+    color: white;
+  }
+
+  .lste-music{
+
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    /* background-color: red; */
+  }
+
+
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  
+
+  max-width: 200px;
+  max-height: 200px;
+  }
+  .card-content{
+    position: absolute;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  
+  .swiper-button-next{
+    color:white;
+  }
+
+
+  .palyerAudio{
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+.img-content{
+  display: flex;
+  align-items: center;
+  height:30%;
+  width: 90%;
+
+  }
+  .img-content img{
+    height: 50%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 0.5s ease-out 100ms
+  }
+  .img-content img:hover{
+  background-color: #030303;
+  opacity: 0.7;
+  
+  }
+  .img-content img:hover + .caca {
+    display: block;
+
+  }
+  .music-infos{
+    height: 20%;
+    color: rgb(255, 255, 255);
+  }
+
+  .music-infos h3{
+    font-weight:  600;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: white;
+  }
+
+  .music-infos p{
+    font-size: 10px;
+    color: rgba(255, 252, 252, 0.855);
+  }
+
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
+}
