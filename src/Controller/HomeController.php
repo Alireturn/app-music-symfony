@@ -88,8 +88,29 @@ class HomeController extends AbstractController
         return $this->redirectToRoute('app_home');
     }
 
+
+    // remove favoris depuis la partie favoris
+    #[Route('remove/favorite/user/{id}', name: 'remove_favorite_User')]
+    public function removeFavoriUser(Request $request, Music $music, EntityManagerInterface $entityManager): Response
+    {
+        $user = $this->getUser();
+        $music->removeFavori($user);
+
+        $entityManager->persist($user);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('app_account');
+    }
+
     public function selectMusic(Request $request, $musicId)
     {
+        // Récupère l'URL de la musique à partir de la base de données en utilisant l'ID de la musique
+        $music = $this->getDoctrine()->getRepository(Music::class)->find($musicId);
+
+        $music = $this->getDoctrine()->getRepository(Music::class)->find($musicId);
+        $musicUrl = $music->getUrl();
+
+        // creation du cookie
         $response = new Response();
         $response->headers->setCookie(
             new Cookie('selected_music', $musicId, time() + 3600, '/')
