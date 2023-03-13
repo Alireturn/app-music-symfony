@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Regex;
 
 class RegisterType extends AbstractType
 {
@@ -34,6 +35,12 @@ class RegisterType extends AbstractType
                 'required' => true,
                 'first_options' => ['label' => 'Mot de Passe'],
                 'second_options' => ['label' => 'Confirmer votre Mot de passe'],
+                'constraints' => [
+                    new Regex(
+                        '/"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/',
+                        "Il faut un mot de passe avec un minimum de huit caractère et au moins une lettre et un chiffre  "
+                    )
+                ]
             ])
             ->add('submit', SubmitType::class, [
                 'label' => "S'inscrire"

@@ -20,8 +20,14 @@
 			</div>
 			<div class="login">
 				{% if app.user %}
-					<a href=" {{ path('app_account')}} ">
-						<img src="{{ asset('assets/img/profil.png')}}" height="30px" alt=""></a>
+					{% if  is_granted('ROLE_ADMIN') %}
+						<a href="{{ path('admin') }}">gestion  |</a>
+						<a href=" {{ path('app_account')}} ">
+							<img src="{{ asset('assets/img/profil.png')}}" height="30px" alt=""></a>
+					{% else %}
+						<a href=" {{ path('app_account')}} ">
+							<img src="{{ asset('assets/img/profil.png')}}" height="30px" alt=""></a>
+					{% endif %}
 				{% else %}
 					<a href="{{ path('app_login') }}">Connexion</a>
 					<a href="{{ path('app_register') }}">Inscription</a>
@@ -34,11 +40,11 @@
 			<footer>
 
 				<div class="palyerAudio">
-					<audio id="audio" src="" controls autoplay></audio>
+					<audio id="audio" src="" controls></audio>
 				</div>
 
 			</footer>
 
 		{% endblock %}
 	</body>
-</html></body></html>
+</html></body></html></body></html>

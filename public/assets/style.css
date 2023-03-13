@@ -8,20 +8,21 @@
     box-sizing: border-box;
     list-style: none;
     font-family: 'Nunito Sans', sans-serif;  
+    text-decoration: none;
 }
 a{
-    color: white;
+    color: black;
 }
 
 
 body{
-  background-image: linear-gradient(to right top, #0f2f60, #004460, #125353, #475d4e, #67675c);
+background-image: linear-gradient(to top, #141414, #1b1b1b, #222222, #292929, #303030);;
 
 min-height: 100vh;
 }
 
 nav{
-    background-color: transparent;
+
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -42,7 +43,13 @@ nav{
   justify-content: center;
   
 }
-
+.login a{
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 16px;
+  
+}
 .login img{
   margin-right: 10px;
   height: 29px;
@@ -55,9 +62,12 @@ nav{
   height: 300px;
   width: 100%;
 }
-
+ 
 .container-favoris{
-  margin: 10px 20px;
+  margin: 0 20px;
+}
+.container-favoris h2{
+  color: white;
 }
 .search{
     display: flex;
@@ -109,12 +119,32 @@ input:focus{
   padding: 10px 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  
+}
+.infos-user h2{
+  margin-top: 10px;
+  color: white;
 }
 
 .infos-user i{
   margin-right:  10px;
+
  
 }
+
+.infos-user a {
+  color: white;
+  padding: 10px;
+  background-color: red;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+}
+.infos-user a:hover {
+  transform: scale(1.1);
+}
+
 .form-login{
 
   display: flex;
@@ -144,7 +174,9 @@ main{
   justify-content: center;
   flex-direction: column;
 }
-
+.nameRegister{
+  color: rgb(89, 89, 130);
+}
 .register-container{
   display: flex;
   justify-content: center;
@@ -171,11 +203,25 @@ main{
   border-radius: 5px;
   border: 1px solid black;
 }
-
+#register_submit{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px solid rgb(22, 22, 22);
+  transition: all .2s ease-in-out;
+  background-color: transparent;
+  color: white;
+}
+#register_submit:hover{
+  transform: scale(1.03);
+  background-color: rgb(243, 243, 243);
+  color: #030303;
+}
 .register-container div label{
   font-weight: 600;
   font-size: 17px;
   letter-spacing: 1px;
+  color: white;
 }
 
 .nameRegister {
@@ -185,33 +231,7 @@ main{
 .nameRegister h1{
   font-family: 'Open Sans', sans-serif;
 }
-/* .register {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0;
-  text-align: center;
 
-}
-
-.register input{
-  padding: 8px 26px;
-  border-radius: 5px;
-  border: 1px solid black;
-}
-.register label{
-margin-bottom: 5px;
-font-weight: bold;
-font-size: 17px;
-color: whitesmoke;
-}
-.register button{
-  background-color: #33a748;
-  padding: 10px;
-  border: 1px solid black;
-border-radius: 10px;
-cursor: pointer;
-  } */
 
 section{
   padding: 20px 100px;
@@ -303,15 +323,16 @@ section{
 
   }
   .music-infos{
+    margin-top: 10px;
     height: 20%;
     color: rgb(255, 255, 255);
   }
 
   .music-infos h3{
-    font-weight:  600;
+    font-weight:  500;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 2px;
-    font-size: 12px;
+    font-size: 15px;
     color: white;
   }
 
