@@ -25,7 +25,7 @@ class MusicCrudController extends AbstractCrudController
             ImageField::new('image')->setBasePath('uploads/')->setUploadDir('public/uploads')->setUploadedFileNamePattern('[randomhash].[extension]')->setRequired(false),
             TextField::new('singer'),
             AssociationField::new('category'),
-            ImageField::new('sound')->setBasePath('uploads/music')->setUploadDir('public/uploads/music')->setRequired(false)
+            ImageField::new('sound')->setBasePath('uploads/music')->setUploadDir('public/uploads/music')->setUploadedFileNamePattern('[randomhash].[extension]')->setRequired(false)
         ];
     }
 }

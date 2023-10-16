@@ -10,7 +10,6 @@ let song;
 let audio = document.getElementById("audio");
 
 
-
 /// cokiee
 function recupId() {
     for (const music of musicJson) {
@@ -21,7 +20,6 @@ function recupId() {
     }
 }
 
-// click sur image 
 img.forEach(element => {
     element.addEventListener('click', recupId());
 });

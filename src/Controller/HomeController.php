@@ -12,6 +12,7 @@ use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Serializer\Serializer;
 use Container4oXqlel\getUserInterfaceService;
+use PhpParser\Node\Expr\New_;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,9 +48,6 @@ class HomeController extends AbstractController
 
 
         $selectedMusic = $request->cookies->get('selected_music');
-
-
-
 
 
         return $this->render('home/index.html.twig', [

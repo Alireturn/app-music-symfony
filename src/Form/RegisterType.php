@@ -35,12 +35,12 @@ class RegisterType extends AbstractType
                 'required' => true,
                 'first_options' => ['label' => 'Mot de Passe'],
                 'second_options' => ['label' => 'Confirmer votre Mot de passe'],
-                'constraints' => [
-                    new Regex(
-                        '/"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/',
-                        "Il faut un mot de passe avec un minimum de huit caractère et au moins une lettre et un chiffre  "
-                    )
-                ]
+                // 'constraints' => [
+                //     new Regex(
+                //         '/"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/',
+                //         "Il faut un mot de passe avec un minimum de huit caractère et au moins une lettre et un chiffre  "
+                //     )
+                // ]
             ])
             ->add('submit', SubmitType::class, [
                 'label' => "S'inscrire"
